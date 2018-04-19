@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+  <title>02 - This no Arrow Function</title>
+</head>
+<body>
+
+  <button id = "btn">Click Me!</button>
+</body>
+
+<script>
+/*jshint esversion: 6 */
+
+    const btn = document.getElementById('btn');
+    btn.addEventListener('click', function() {
+      console.log(this);
+    });
+
+</script>
+</html>

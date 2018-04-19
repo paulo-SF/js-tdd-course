@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+  <title>01 - Uses Templates Literals</title>
+</head>
+<body>
+</body>
+
+<script>
+/*jshint esversion: 6 */
+
+const ireland = {
+  live: 'Dublin',
+  love: 'Galway'
+};
+
+//pior forma
+const text = 'Eu moro em ' + ireland.live + ' e sou apaixonado por ' + ireland.love + '!';
+
+//melhor forma
+const newText = `Eu moro em ${ireland.live} e sou apaixonado por ${ireland.love}!`;
+
+//pior forma
+const fruits = 'banana'
+                + `\n`
+                + 'orange'
+                + `\n`
+                + 'apple';
+
+//melhor forma
+const newFruits =
+`banana
+orange
+apple`;
+
+
+  console.log(newFruits);
+
+  console.log(newText);
+
+</script>
+</html>
