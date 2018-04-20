@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+  <title>03 - Tagged Template Literal</title>
+</head>
+<style>
+  .green {
+    color: green;
+    font-size: 25px;
+  }
+</style>>
+<body>
+</body>
+
+<script>
+/*jshint esversion: 6 */
+
+const city = 'Dublin';
+const something = 'Guinness';
+const otherThing = 'Leprechaums';
+
+function green(template, ...values) {
+  debugger
+}
+
+const ireland = green`I live in ${city} the city of ${something} and ${otherThing}!`;
+
+document.body.innerHTML = ireland;
+
+</script>
+</html>

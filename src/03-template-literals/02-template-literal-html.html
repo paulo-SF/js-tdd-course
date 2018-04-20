@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+  <title>02 - Template Literal para HTML Fragments</title>
+</head>
+<body>
+</body>
+
+<script>
+/*jshint esversion: 6 */
+
+const article = {
+  title: 'Aprendendo Template Strings',
+  intro: 'Uma breve explicação de como se utilizar template strings do ES6 em seu código hoje!',
+  body: 'A única coisa entre você e seus objetivos é a história que você sempre usa para não alcançá-lo "Jordan Belfort"',
+  tags: ['es6', 'js', 'template-literal'],
+  author: 'Paulo S. Ferreira'
+};
+
+function renderAuthor(name) {
+  return (name) ? name : 'unknown';
+}
+
+const markup = `
+  <article>
+    <head>
+      <h1>${article.title}</h1>
+    </head>
+    <section>
+      <p>${article.intro}</p>
+    </section>
+    <footer>
+      <ul>
+        ${article.tags.map((tag) => `<li>${tag}</li>`).join('')}
+      </ul>
+      <p>Author: ${renderAuthor(article.author)}</p>
+    </footer>
+  </article>
+`;
+
+document.body.innerHTML = markup;
+
+</script>
+</html>
