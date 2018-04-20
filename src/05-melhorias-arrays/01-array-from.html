@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+  <title>01 - Array.from </title>
+</head>
+<body>
+
+  <ul id="list">
+    <li>Paulo</li>
+    <li>Jonas</li>
+    <li>Gabriel</li>
+  </ul>
+
+</body>
+
+<script>
+/*jshint esversion: 6 */
+
+  //const text = 'Paulo';
+  //console.log(Array.from(text));
+
+  const list = document.querySelectorAll('#list li');
+  const listArray = Array.from(list)
+  console.log(listArray);
+
+  const names = listArray.map((name) => name.textContent);
+  console.log(names);
+</script>
+</html>
