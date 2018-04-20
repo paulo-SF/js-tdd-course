@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+  <title>02 - Default Parameters</title>
+</head>
+<body>
+</body>
+
+<script>
+/*jshint esversion: 6 */
+
+  function hello(name = 'Paulo', surname = 'Ferreira') {
+    console.log(`Hello ${name} ${surname}! How are you?`);
+  }
+
+  hello();
+
+  hello('Jonas', 'Mendes');
+
+  hello('Jonas');
+
+
+</script>
+</html>
