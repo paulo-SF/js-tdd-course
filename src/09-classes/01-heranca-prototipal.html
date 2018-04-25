@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+  <title>01 - Revisão Herança Prototipal</title>
+</head>
+<body>
+</body>
+
+<script>
+/*jshint esversion: 6 */
+
+  //class
+  function Animal(kind, sound) {
+    //constructor
+    this.kind = kind;
+    this.sound = sound;
+  }
+
+  //method
+  Animal.prototype.hello = function() {
+    console.log(`${this.sound} I'm a ${this.kind}!`);
+  };
+
+  const dog = new Animal('dog', 'Wouf!');
+  const cat = new Animal('cat', 'miau!');
+
+</script>
+</html>
