@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+  <title>02 - Spread Dentro de Função</title>
+</head>
+<body>
+</body>
+
+<script>
+/*jshint esversion: 6 */
+
+  function makeSandwich(bread, cheese, sauce) {
+    console.log(`Your sandwich with ${bread} bread, ${cheese} cheese and ${sauce} is done!`);
+  }
+
+  const ingredients = ['white', 'cheddar', 'barbecue'];
+
+  makeSandwich(...ingredients);
+</script>
+</html>
