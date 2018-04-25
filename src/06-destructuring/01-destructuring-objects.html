@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+  <title>01 - Destructuring Objects </title>
+</head>
+<body>
+</body>
+
+<script>
+/*jshint esversion: 6 */
+
+  var data = {
+    name : 'Paulo',
+    surname: 'S. Ferreira',
+    age: 30,
+    blog: 'https:///blablabla.com.br',
+    social: {
+      twitter: '@paulo_SF',
+      facebook: '/paulosf'
+    }
+  };
+
+  const {name, surname} = data;
+  console.log(name);
+  console.log(surname);
+
+  const {facebook, twitter} = data.social;
+
+  console.log(facebook);
+  console.log(twitter);
+
+  const {facebook: fb} = data.social;
+
+  console.log(fb);
+
+  const {city = 'Dublin'} = data;
+  console.log(city);
+
+</script>
+</html>
