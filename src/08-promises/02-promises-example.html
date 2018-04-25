@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+  <title>02- Promises Example</title>
+</head>
+<body>
+</body>
+
+<script>
+/*jshint esversion: 6 */
+
+  var posts = fetch('https://willianjusten.com.br/search.json');
+
+  //Status das Promisses:
+  // Pending: quando a promise ainda está sendo resolvida;
+  // Resolved: quando a promise já foi resolvida;
+  // Rejected: quando houver algum problema na promise e ela não conseguir se resouver;
+
+  setTimeout(() => {
+      console.log(posts);
+  }, 3000);
+
+  posts
+    .then(data => data.json())
+    .then(data => {
+      throw new Error('Eita deu erro! Sorry');
+    })
+    // .then(data => data.map(post => {
+    //   console.log(post.title);
+    // }))
+    .catch(err => console.error(err));
+</script>
+</html>
