@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+  <title>01 - Proxies Intro</title>
+</head>
+<body>
+</body>
+
+<script>
+/*jshint esversion: 6 */
+
+  let obj = {
+    name: 'Paulo',
+    age: 30
+  };
+
+  let proxy = new Proxy(obj, {
+    get(target, name) {
+      console.log('Alguém está pedidndo o nome... xD');
+      return target[name];
+    },
+    set(target, name, value) {
+      console.log('Alguém está mudando o nome!');
+      target[name] = value.toUpperCase();
+    }
+  });
+
+</script>
+</html>
