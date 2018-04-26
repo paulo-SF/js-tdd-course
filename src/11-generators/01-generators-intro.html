@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+  <title>01 - Generetors Intro</title>
+</head>
+<body>
+</body>
+
+<script>
+/*jshint esversion: 6 */
+
+  function* genNames() {
+    console.log('Chamando primeiro nome!');
+    yield 'Paulo';
+
+    console.log('Chamando segundo nome!');
+    yield'Jonas';
+
+    console.log('Chamando terceiro nome!');
+    yield'Gabriel';
+  }
+
+  const names = genNames();
+
+  console.log(names.next());
+  console.log(names.next());
+  console.log(names.next());
+
+</script>
+</html>
