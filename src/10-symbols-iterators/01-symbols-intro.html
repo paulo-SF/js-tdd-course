@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+  <title>01 - Symbols Intro</title>
+</head>
+<body>
+</body>
+
+<script>
+/*jshint esversion: 6 */
+                           // Como se tivessem Hashs diferentes
+  let foo = Symbol('name');//ex: hjkasdbknjcxhuixnbcjxklcsd
+  let bar = Symbol('name');//ex: 41564dsad1s5d61d6sd21fg656
+
+  //console.log(foo == bar);
+
+  let obj = {
+    [Symbol('name:')]: 'Paulo',
+    [Symbol('age:')]: 30,
+    city: 'Dublin'
+  };
+
+ const symbols = Object.getOwnPropertySymbols(obj);
+
+ const data = symbols.map(sym => obj[sym]);
+
+ console.log(data);
+
+</script>
+</html>

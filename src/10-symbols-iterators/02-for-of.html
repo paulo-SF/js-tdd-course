@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+  <title>02 - for...of</title>
+</head>
+<body>
+</body>
+
+<script>
+/*jshint esversion: 6 */
+
+
+
+  var txt = 'Ireland';             //iterable
+  var it = txt[Symbol.iterator](); //iterator
+
+  // console.log( it.next() );
+  // console.log( it.next() );
+  // console.log( it.next() );
+  // console.log( it.next() );
+  // console.log( it.next() );
+  // console.log( it.next() );
+  // console.log( it.next() );
+  // console.log( it.next() );
+
+  for ( letter of txt) {
+    console.log(letter);
+    if (letter === 'a') break;
+  }
+
+</script>
+</html>
